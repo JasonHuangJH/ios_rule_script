@@ -1,0 +1,23 @@
+# IBKR
+DOMAIN-SUFFIX,ibkr.com,IBKR
+DOMAIN-SUFFIX,interactivebrokers.com,IBKR
+DOMAIN-SUFFIX,ibllc.com,IBKR
+DOMAIN-SUFFIX,ibroker.com,IBKR
+DOMAIN-SUFFIX,twsapi.com,IBKR
+DOMAIN-SUFFIX,tws.interactivebrokers.com,IBKR
+DOMAIN-SUFFIX,gw.interactivebrokers.com,IBKR
+DOMAIN-SUFFIX,api.interactivebrokers.com,IBKR
+DOMAIN-SUFFIX,client.interactivebrokers.com,IBKR
+DOMAIN-SUFFIX,account.interactivebrokers.com,IBKR
+DOMAIN-SUFFIX,trading.interactivebrokers.com,IBKR
+DOMAIN-SUFFIX,security.interactivebrokers.com,IBKR
+DOMAIN-SUFFIX,gdcdyn.interactivebrokers.com,IBKR
+DOMAIN-SUFFIX,download2.interactivebrokers.com,IBKR
+DOMAIN-SUFFIX,java.com,IBKR
+DOMAIN-SUFFIX,oracle.com,IBKR
+DOMAIN-SUFFIX,update.oracle.com,IBKR
+DOMAIN-SUFFIX,download.oracle.com,IBKR
+DOMAIN-SUFFIX,cdn.ibkr.com,IBKR
+DOMAIN-SUFFIX,secure.interactivebrokers.com,IBKR
+DOMAIN-KEYWORD,ibkr,IBKR
+DOMAIN-KEYWORD,interactivebrokers,IBKR

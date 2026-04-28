@@ -20,4 +20,5 @@ DOMAIN-SUFFIX,download.oracle.com,IBKR
 DOMAIN-SUFFIX,cdn.ibkr.com,IBKR
 DOMAIN-SUFFIX,secure.interactivebrokers.com,IBKR
 DOMAIN-KEYWORD,ibkr,IBKR
+DOMAIN-KEYWORD,ibllc,IBKR
 DOMAIN-KEYWORD,interactivebrokers,IBKR

@@ -1,79 +1,42 @@
-# =================================================================
-# 🛡️ MOOMOO & 富途牛牛 终极全量无死角分流规则 (2026 最新版)
-# =================================================================
-
-# >>>>>>>>>> [第一层：应用特征全拦截] <<<<<<<<<<
-# 只要是 Moomoo 或 富途牛牛 App 发出的流量，无视任何域名/IP，直接强制抓取
+# >>>>>>>>>> [第一层：应用进程与特征捕获（最重要，防漏网）] <<<<<<<<<<
+# 直接拦截所有由 Moomoo App/客户端发出的物理流量
 USER-AGENT,moomoo*,PROXY
-USER-AGENT,Futu*,PROXY
 USER-AGENT,Moomoo*,PROXY
-USER-AGENT,Futubull*,PROXY
 PROCESS-NAME,Moomoo,PROXY
-PROCESS-NAME,Futubull,PROXY
+PROCESS-NAME,moomoo,PROXY
 
-# >>>>>>>>>> [第二层：全量泛域名及衍生壳域名] <<<<<<<<<<
-# 包含所有主权国家注册的本地化壳域名、OpenAPI、量化交易及测试环境
+# >>>>>>>>>> [第二层：Moomoo 官方及衍生全量域名] <<<<<<<<<<
+# 包含 Moomoo 官网、API、行情中转、量化交易及各国壳域名
 DOMAIN-KEYWORD,moomoo,PROXY
-DOMAIN-KEYWORD,futunn,PROXY
-DOMAIN-KEYWORD,futu5,PROXY
-DOMAIN-KEYWORD,futuip,PROXY
-DOMAIN-KEYWORD,futuapi,PROXY
 DOMAIN-SUFFIX,moomoo.com,PROXY
 DOMAIN-SUFFIX,moomooq.com,PROXY
 DOMAIN-SUFFIX,moomooapp.com,PROXY
-DOMAIN-SUFFIX,futunn.com,PROXY
-DOMAIN-SUFFIX,futunnq.com,PROXY
-DOMAIN-SUFFIX,futu5.com,PROXY
-DOMAIN-SUFFIX,futuhk.com,PROXY
-DOMAIN-SUFFIX,futusg.com,PROXY
-DOMAIN-SUFFIX,futuau.com,PROXY
-DOMAIN-SUFFIX,futumy.com,PROXY
-DOMAIN-SUFFIX,futuie.com,PROXY
-DOMAIN-SUFFIX,futuus.com,PROXY
-DOMAIN-SUFFIX,futujp.com,PROXY
-DOMAIN-SUFFIX,futuca.com,PROXY
-DOMAIN-SUFFIX,futubull.com,PROXY
+DOMAIN-SUFFIX,moomooalgo.com,PROXY
+
+# >>>>>>>>>> [第三层：Moomoo 海外底层共用资产（去牛牛化）] <<<<<<<<<<
+# 这些是富途集团专门拨给海外 Moomoo 独立使用的基础设施域名
+DOMAIN-SUFFIX,futuapi.com,PROXY
 DOMAIN-SUFFIX,futu-openapi.com,PROXY
 DOMAIN-SUFFIX,futuglobal.com,PROXY
-DOMAIN-SUFFIX,futufintech.com,PROXY
 DOMAIN-SUFFIX,futuinfra.com,PROXY
 DOMAIN-SUFFIX,futustatic.com,PROXY
-DOMAIN-SUFFIX,futuweb.com,PROXY
 
-# >>>>>>>>>> [第三层：富途特有非标域名（高频行情中转）] <<<<<<<<<<
-# 这些是富途用于行情分发、日志收集、风控反欺诈的专用非标域名
-DOMAIN-SUFFIX,nnq.hk,PROXY
-DOMAIN-SUFFIX,futucloud.com,PROXY
-DOMAIN-SUFFIX,futualgo.com,PROXY
-DOMAIN-SUFFIX,moomooalgo.com,PROXY
-DOMAIN-SUFFIX,futusite.com,PROXY
-
-# >>>>>>>>>> [第四层：全量物理 IP 资产网段（终极护航）] <<<<<<<<<<
-# Moomoo 盘中高频看盘时会绕过 DNS 直连这些 IP 块，必须加 no-resolve 强行接管
-# 包含富途自建机房、腾讯云香港/新加坡高防 BGP、阿里云金融云、AWS 专线中转点
-IP-CIDR,119.29.37.0/24,PROXY,no-resolve
-IP-CIDR,119.29.112.0/24,PROXY,no-resolve
-IP-CIDR,182.254.12.0/24,PROXY,no-resolve
-IP-CIDR,182.254.116.0/24,PROXY,no-resolve
+# >>>>>>>>>> [第四层：Moomoo 全球核心行情与交易 IP 网段] <<<<<<<<<<
+# Moomoo 在美国、新加坡等地的行情直连 TCP/UDP 物理网段（必须加 no-resolve）
+# 覆盖 AWS 东南亚/北美节点、腾讯云国际金融高防专线
 IP-CIDR,150.109.0.0/16,PROXY,no-resolve
 IP-CIDR,129.226.0.0/16,PROXY,no-resolve
 IP-CIDR,43.128.0.0/16,PROXY,no-resolve
 IP-CIDR,43.129.0.0/16,PROXY,no-resolve
-IP-CIDR,43.132.0.0/16,PROXY,no-resolve
 IP-CIDR,43.133.0.0/16,PROXY,no-resolve
 IP-CIDR,43.134.0.0/16,PROXY,no-resolve
-IP-CIDR,101.32.0.0/16,PROXY,no-resolve
-IP-CIDR,101.33.0.0/16,PROXY,no-resolve
-IP-CIDR,124.156.0.0/16,PROXY,no-resolve
-IP-CIDR,119.28.0.0/16,PROXY,no-resolve
 IP-CIDR,161.117.0.0/16,PROXY,no-resolve
 IP-CIDR,52.74.0.0/16,PROXY,no-resolve
 IP-CIDR,18.136.0.0/16,PROXY,no-resolve
 IP-CIDR,54.254.0.0/16,PROXY,no-resolve
 
-# >>>>>>>>>> [第五层：资金存管与开户风控必备第三方] <<<<<<<<<<
-# Moomoo 在进行入金（Plaid）、出金、银行转账和出入金安全验证时必走的第三方
+# >>>>>>>>>> [第五层：海外出入金与合规风控基础设施] <<<<<<<<<<
+# Moomoo 绑定海外银行卡、快捷入金（Plaid）、Stripe 支付以及人机验证必走通道
 DOMAIN-SUFFIX,plaid.com,PROXY
 DOMAIN-SUFFIX,stripe.com,PROXY
 DOMAIN-SUFFIX,recaptcha.net,PROXY
-DOMAIN-SUFFIX,google.com,PROXY

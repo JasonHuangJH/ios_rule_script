@@ -74,9 +74,6 @@ DOMAIN-SUFFIX,stripe.com,PROXY
 DOMAIN-SUFFIX,recaptcha.net,PROXY
 DOMAIN-SUFFIX,google.com,PROXY
 
-# >>>>>>>>>> [iOS 终极全量拦截：海外腾讯云 & AWS 物理 IP 库] <<<<<<<<<<
-# Moomoo 盘中所有纯数字的行情、动态加速节点全部包含在内 (必须加 no-resolve)
-
 # 1. 腾讯云国际 (Tencent Cloud Global) 核心 IP 块
 IP-CIDR,43.128.0.0/16,PROXY,no-resolve
 IP-CIDR,43.129.0.0/16,PROXY,no-resolve

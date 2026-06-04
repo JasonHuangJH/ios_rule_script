@@ -98,16 +98,3 @@ IP-CIDR,18.136.0.0/16,PROXY,no-resolve
 IP-CIDR,54.254.0.0/16,PROXY,no-resolve
 IP-CIDR,13.228.0.0/16,PROXY,no-resolve
 IP-CIDR,54.169.0.0/16,PROXY,no-resolve
-
-# >>>>>>>>>> [Moomoo 官方海外域名（配合 IP 库食用）] <<<<<<<<<<
-DOMAIN-KEYWORD,moomoo,PROXY
-DOMAIN-SUFFIX,moomoo.com,PROXY
-DOMAIN-SUFFIX,moomooq.com,PROXY
-DOMAIN-SUFFIX,moomooapp.com,PROXY
-DOMAIN-SUFFIX,moomooalgo.com,PROXY
-DOMAIN-SUFFIX,futuapi.com,PROXY
-DOMAIN-SUFFIX,futu-openapi.com,PROXY
-DOMAIN-SUFFIX,futuglobal.com,PROXY
-DOMAIN-SUFFIX,futuinfra.com,PROXY
-DOMAIN-SUFFIX,futustatic.com,PROXY
-DOMAIN-SUFFIX,tencentcloud.com,PROXY

@@ -73,3 +73,41 @@ DOMAIN-SUFFIX,plaid.com,PROXY
 DOMAIN-SUFFIX,stripe.com,PROXY
 DOMAIN-SUFFIX,recaptcha.net,PROXY
 DOMAIN-SUFFIX,google.com,PROXY
+
+# >>>>>>>>>> [iOS 终极全量拦截：海外腾讯云 & AWS 物理 IP 库] <<<<<<<<<<
+# Moomoo 盘中所有纯数字的行情、动态加速节点全部包含在内 (必须加 no-resolve)
+
+# 1. 腾讯云国际 (Tencent Cloud Global) 核心 IP 块
+IP-CIDR,43.128.0.0/16,PROXY,no-resolve
+IP-CIDR,43.129.0.0/16,PROXY,no-resolve
+IP-CIDR,43.132.0.0/16,PROXY,no-resolve
+IP-CIDR,43.133.0.0/16,PROXY,no-resolve
+IP-CIDR,43.134.0.0/16,PROXY,no-resolve
+IP-CIDR,43.156.0.0/16,PROXY,no-resolve
+IP-CIDR,129.226.0.0/16,PROXY,no-resolve
+IP-CIDR,150.109.0.0/16,PROXY,no-resolve
+IP-CIDR,101.32.0.0/16,PROXY,no-resolve
+IP-CIDR,101.33.0.0/16,PROXY,no-resolve
+IP-CIDR,119.28.0.0/16,PROXY,no-resolve
+IP-CIDR,124.156.0.0/16,PROXY,no-resolve
+IP-CIDR,161.117.0.0/16,PROXY,no-resolve
+
+# 2. 亚马逊云 (AWS) 亚太及北美核心金融数据中心
+IP-CIDR,52.74.0.0/16,PROXY,no-resolve
+IP-CIDR,18.136.0.0/16,PROXY,no-resolve
+IP-CIDR,54.254.0.0/16,PROXY,no-resolve
+IP-CIDR,13.228.0.0/16,PROXY,no-resolve
+IP-CIDR,54.169.0.0/16,PROXY,no-resolve
+
+# >>>>>>>>>> [Moomoo 官方海外域名（配合 IP 库食用）] <<<<<<<<<<
+DOMAIN-KEYWORD,moomoo,PROXY
+DOMAIN-SUFFIX,moomoo.com,PROXY
+DOMAIN-SUFFIX,moomooq.com,PROXY
+DOMAIN-SUFFIX,moomooapp.com,PROXY
+DOMAIN-SUFFIX,moomooalgo.com,PROXY
+DOMAIN-SUFFIX,futuapi.com,PROXY
+DOMAIN-SUFFIX,futu-openapi.com,PROXY
+DOMAIN-SUFFIX,futuglobal.com,PROXY
+DOMAIN-SUFFIX,futuinfra.com,PROXY
+DOMAIN-SUFFIX,futustatic.com,PROXY
+DOMAIN-SUFFIX,tencentcloud.com,PROXY

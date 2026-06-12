@@ -1,96 +1,76 @@
-# >>>>>>>>>> [第一层：应用特征全拦截] <<<<<<<<<<
-# 只要是 Moomoo 或 富途牛牛 App 发出的流量，无视任何域名/IP，直接强制抓取
-USER-AGENT,moomoo*,PROXY
-USER-AGENT,Futu*,PROXY
-USER-AGENT,Moomoo*,PROXY
-USER-AGENT,Futubull*,PROXY
-PROCESS-NAME,Moomoo,PROXY
-PROCESS-NAME,Futubull,PROXY
+DOMAIN-KEYWORD,moomoo
+DOMAIN-KEYWORD,futunn
+DOMAIN-KEYWORD,futu5
+DOMAIN-KEYWORD,futuip
+DOMAIN-KEYWORD,futuapi
+DOMAIN-SUFFIX,moomoo.com
+DOMAIN-SUFFIX,moomooq.com
+DOMAIN-SUFFIX,moomooapp.com
+DOMAIN-SUFFIX,futunn.com
+DOMAIN-SUFFIX,futunnq.com
+DOMAIN-SUFFIX,futu5.com
+DOMAIN-SUFFIX,futuhk.com
+DOMAIN-SUFFIX,futusg.com
+DOMAIN-SUFFIX,futuau.com
+DOMAIN-SUFFIX,futumy.com
+DOMAIN-SUFFIX,futuie.com
+DOMAIN-SUFFIX,futuus.com
+DOMAIN-SUFFIX,futujp.com
+DOMAIN-SUFFIX,futuca.com
+DOMAIN-SUFFIX,futubull.com
+DOMAIN-SUFFIX,futu-openapi.com
+DOMAIN-SUFFIX,futuglobal.com
+DOMAIN-SUFFIX,futufintech.com
+DOMAIN-SUFFIX,futuinfra.com
+DOMAIN-SUFFIX,futustatic.com
+DOMAIN-SUFFIX,futuweb.com
 
-# >>>>>>>>>> [第二层：全量泛域名及衍生壳域名] <<<<<<<<<<
-# 包含所有主权国家注册的本地化壳域名、OpenAPI、量化交易及测试环境
-DOMAIN-KEYWORD,moomoo,PROXY
-DOMAIN-KEYWORD,futunn,PROXY
-DOMAIN-KEYWORD,futu5,PROXY
-DOMAIN-KEYWORD,futuip,PROXY
-DOMAIN-KEYWORD,futuapi,PROXY
-DOMAIN-SUFFIX,moomoo.com,PROXY
-DOMAIN-SUFFIX,moomooq.com,PROXY
-DOMAIN-SUFFIX,moomooapp.com,PROXY
-DOMAIN-SUFFIX,futunn.com,PROXY
-DOMAIN-SUFFIX,futunnq.com,PROXY
-DOMAIN-SUFFIX,futu5.com,PROXY
-DOMAIN-SUFFIX,futuhk.com,PROXY
-DOMAIN-SUFFIX,futusg.com,PROXY
-DOMAIN-SUFFIX,futuau.com,PROXY
-DOMAIN-SUFFIX,futumy.com,PROXY
-DOMAIN-SUFFIX,futuie.com,PROXY
-DOMAIN-SUFFIX,futuus.com,PROXY
-DOMAIN-SUFFIX,futujp.com,PROXY
-DOMAIN-SUFFIX,futuca.com,PROXY
-DOMAIN-SUFFIX,futubull.com,PROXY
-DOMAIN-SUFFIX,futu-openapi.com,PROXY
-DOMAIN-SUFFIX,futuglobal.com,PROXY
-DOMAIN-SUFFIX,futufintech.com,PROXY
-DOMAIN-SUFFIX,futuinfra.com,PROXY
-DOMAIN-SUFFIX,futustatic.com,PROXY
-DOMAIN-SUFFIX,futuweb.com,PROXY
+DOMAIN-SUFFIX,nnq.hk
+DOMAIN-SUFFIX,futucloud.com
+DOMAIN-SUFFIX,futualgo.com
+DOMAIN-SUFFIX,moomooalgo.com
+DOMAIN-SUFFIX,futusite.com
 
-# >>>>>>>>>> [第三层：富途特有非标域名（高频行情中转）] <<<<<<<<<<
-# 这些是富途用于行情分发、日志收集、风控反欺诈的专用非标域名
-DOMAIN-SUFFIX,nnq.hk,PROXY
-DOMAIN-SUFFIX,futucloud.com,PROXY
-DOMAIN-SUFFIX,futualgo.com,PROXY
-DOMAIN-SUFFIX,moomooalgo.com,PROXY
-DOMAIN-SUFFIX,futusite.com,PROXY
+IP-CIDR,119.29.37.0/24
+IP-CIDR,119.29.112.0/24
+IP-CIDR,182.254.12.0/24
+IP-CIDR,182.254.116.0/24
+IP-CIDR,150.109.0.0/16
+IP-CIDR,129.226.0.0/16
+IP-CIDR,43.128.0.0/16
+IP-CIDR,43.129.0.0/16
+IP-CIDR,43.132.0.0/16
+IP-CIDR,43.133.0.0/16
+IP-CIDR,43.134.0.0/16
+IP-CIDR,101.32.0.0/16
+IP-CIDR,101.33.0.0/16
+IP-CIDR,124.156.0.0/16
+IP-CIDR,119.28.0.0/16
+IP-CIDR,161.117.0.0/16
+IP-CIDR,52.74.0.0/16
+IP-CIDR,18.136.0.0/16
+IP-CIDR,54.254.0.0/16
 
-# >>>>>>>>>> [第四层：全量物理 IP 资产网段（终极护航）] <<<<<<<<<<
-# Moomoo 盘中高频看盘时会绕过 DNS 直连这些 IP 块，必须加 no-resolve 强行接管
-# 包含富途自建机房、腾讯云香港/新加坡高防 BGP、阿里云金融云、AWS 专线中转点
-IP-CIDR,119.29.37.0/24,PROXY,no-resolve
-IP-CIDR,119.29.112.0/24,PROXY,no-resolve
-IP-CIDR,182.254.12.0/24,PROXY,no-resolve
-IP-CIDR,182.254.116.0/24,PROXY,no-resolve
-IP-CIDR,150.109.0.0/16,PROXY,no-resolve
-IP-CIDR,129.226.0.0/16,PROXY,no-resolve
-IP-CIDR,43.128.0.0/16,PROXY,no-resolve
-IP-CIDR,43.129.0.0/16,PROXY,no-resolve
-IP-CIDR,43.132.0.0/16,PROXY,no-resolve
-IP-CIDR,43.133.0.0/16,PROXY,no-resolve
-IP-CIDR,43.134.0.0/16,PROXY,no-resolve
-IP-CIDR,101.32.0.0/16,PROXY,no-resolve
-IP-CIDR,101.33.0.0/16,PROXY,no-resolve
-IP-CIDR,124.156.0.0/16,PROXY,no-resolve
-IP-CIDR,119.28.0.0/16,PROXY,no-resolve
-IP-CIDR,161.117.0.0/16,PROXY,no-resolve
-IP-CIDR,52.74.0.0/16,PROXY,no-resolve
-IP-CIDR,18.136.0.0/16,PROXY,no-resolve
-IP-CIDR,54.254.0.0/16,PROXY,no-resolve
+DOMAIN-SUFFIX,plaid.com
+DOMAIN-SUFFIX,stripe.com
+DOMAIN-SUFFIX,recaptcha.net
 
-# >>>>>>>>>> [第五层：资金存管与开户风控必备第三方] <<<<<<<<<<
-# Moomoo 在进行入金（Plaid）、出金、银行转账和出入金安全验证时必走的第三方
-DOMAIN-SUFFIX,plaid.com,PROXY
-DOMAIN-SUFFIX,stripe.com,PROXY
-DOMAIN-SUFFIX,recaptcha.net,PROXY
+IP-CIDR,43.128.0.0/16
+IP-CIDR,43.129.0.0/16
+IP-CIDR,43.132.0.0/16
+IP-CIDR,43.133.0.0/16
+IP-CIDR,43.134.0.0/16
+IP-CIDR,43.156.0.0/16
+IP-CIDR,129.226.0.0/16
+IP-CIDR,150.109.0.0/16
+IP-CIDR,101.32.0.0/16
+IP-CIDR,101.33.0.0/16
+IP-CIDR,119.28.0.0/16
+IP-CIDR,124.156.0.0/16
+IP-CIDR,161.117.0.0/16
 
-# 1. 腾讯云国际 (Tencent Cloud Global) 核心 IP 块
-IP-CIDR,43.128.0.0/16,PROXY,no-resolve
-IP-CIDR,43.129.0.0/16,PROXY,no-resolve
-IP-CIDR,43.132.0.0/16,PROXY,no-resolve
-IP-CIDR,43.133.0.0/16,PROXY,no-resolve
-IP-CIDR,43.134.0.0/16,PROXY,no-resolve
-IP-CIDR,43.156.0.0/16,PROXY,no-resolve
-IP-CIDR,129.226.0.0/16,PROXY,no-resolve
-IP-CIDR,150.109.0.0/16,PROXY,no-resolve
-IP-CIDR,101.32.0.0/16,PROXY,no-resolve
-IP-CIDR,101.33.0.0/16,PROXY,no-resolve
-IP-CIDR,119.28.0.0/16,PROXY,no-resolve
-IP-CIDR,124.156.0.0/16,PROXY,no-resolve
-IP-CIDR,161.117.0.0/16,PROXY,no-resolve
-
-# 2. 亚马逊云 (AWS) 亚太及北美核心金融数据中心
-IP-CIDR,52.74.0.0/16,PROXY,no-resolve
-IP-CIDR,18.136.0.0/16,PROXY,no-resolve
-IP-CIDR,54.254.0.0/16,PROXY,no-resolve
-IP-CIDR,13.228.0.0/16,PROXY,no-resolve
-IP-CIDR,54.169.0.0/16,PROXY,no-resolve
+IP-CIDR,52.74.0.0/16
+IP-CIDR,18.136.0.0/16
+IP-CIDR,54.254.0.0/16
+IP-CIDR,13.228.0.0/16
+IP-CIDR,54.169.0.0/16

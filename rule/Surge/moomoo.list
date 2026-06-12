@@ -72,7 +72,6 @@ IP-CIDR,54.254.0.0/16,PROXY,no-resolve
 DOMAIN-SUFFIX,plaid.com,PROXY
 DOMAIN-SUFFIX,stripe.com,PROXY
 DOMAIN-SUFFIX,recaptcha.net,PROXY
-DOMAIN-SUFFIX,google.com,PROXY
 
 # 1. 腾讯云国际 (Tencent Cloud Global) 核心 IP 块
 IP-CIDR,43.128.0.0/16,PROXY,no-resolve

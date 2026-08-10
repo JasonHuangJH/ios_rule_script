@@ -35,6 +35,9 @@ DOMAIN-SUFFIX,ibgateway.com
 # --- 5. 身份验证、文档与辅助服务 ---
 # 注意：IBKR 登录/二步验证依赖的主域名均已包含在上述 SUFFIX 中，
 # 此处补充可能的关联推送及分析域名
+DOMAIN-SUFFIX,ibkr.com.cn
+DOMAIN-SUFFIX,tradersacademy.online
+DOMAIN-SUFFIX,ibkr.zone
 DOMAIN-SUFFIX,mobile-identity.com
 
 # --- 6. 专属 IP-CIDR 网段 (已聚合去重，包含官方数据中心与专线) ---

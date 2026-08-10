@@ -1,6 +1,7 @@
 # --- 1. 关键字匹配 ---
 DOMAIN-KEYWORD,interactivebrokers
 DOMAIN-KEYWORD,ibkr
+DOMAIN-KEYWORD,ibllc
 
 # --- 2. IBKR 核心与各区域官方主域名 ---
 DOMAIN-SUFFIX,interactivebrokers.com
@@ -31,6 +32,7 @@ DOMAIN-SUFFIX,ibgroup.com
 DOMAIN-SUFFIX,interactive-brokers.com
 DOMAIN-SUFFIX,ibkr.cloud
 DOMAIN-SUFFIX,ibgateway.com
+DOMAIN-SUFFIX,amazonaws.com
 
 # --- 5. 身份验证、文档与辅助服务 ---
 # 注意：IBKR 登录/二步验证依赖的主域名均已包含在上述 SUFFIX 中，

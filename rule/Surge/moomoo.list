@@ -123,7 +123,7 @@ IP-CIDR,182.254.116.0/24,no-resolve
 IP-CIDR,183.60.225.0/24,no-resolve
 IP-CIDR,193.112.84.0/24,no-resolve
 IP-CIDR,193.112.234.0/24,no-resolve
-IP-CIDR,1.14.216.170,no-resolve
+IP-CIDR,1.14.216.170/32,no-resolve
 
 # AWS 相关节点
 IP-CIDR,13.228.0.0/16,no-resolve

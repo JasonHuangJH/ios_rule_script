@@ -75,6 +75,7 @@ DOMAIN-SUFFIX,qtlcdn.com
 DOMAIN-SUFFIX,launches.appsflyersdk.com
 DOMAIN,cg.play-analytics.com
 DOMAIN-SUFFIX,shortconn.im.qcloud.com
+DOMAIN-SUFFIX,shortsgp.im.qcloud.com
 
 # --- 7. 第三方配套服务（可按需保留或独立管理）---
 DOMAIN-SUFFIX,plaid.com
@@ -122,6 +123,7 @@ IP-CIDR,182.254.116.0/24,no-resolve
 IP-CIDR,183.60.225.0/24,no-resolve
 IP-CIDR,193.112.84.0/24,no-resolve
 IP-CIDR,193.112.234.0/24,no-resolve
+IP-CIDR,1.14.216.170,no-resolve
 
 # AWS 相关节点
 IP-CIDR,13.228.0.0/16,no-resolve

@@ -1,23 +1,56 @@
-DOMAIN-SUFFIX,ibkr.com
-DOMAIN-SUFFIX,interactivebrokers.com
-DOMAIN-SUFFIX,ibllc.com
-DOMAIN-SUFFIX,ibroker.com
-DOMAIN-SUFFIX,twsapi.com
-DOMAIN-SUFFIX,tws.interactivebrokers.com
-DOMAIN-SUFFIX,gw.interactivebrokers.com
-DOMAIN-SUFFIX,api.interactivebrokers.com
-DOMAIN-SUFFIX,client.interactivebrokers.com
-DOMAIN-SUFFIX,account.interactivebrokers.com
-DOMAIN-SUFFIX,trading.interactivebrokers.com
-DOMAIN-SUFFIX,security.interactivebrokers.com
-DOMAIN-SUFFIX,gdcdyn.interactivebrokers.com
-DOMAIN-SUFFIX,download2.interactivebrokers.com
-DOMAIN-SUFFIX,java.com
-DOMAIN-SUFFIX,oracle.com
-DOMAIN-SUFFIX,update.oracle.com
-DOMAIN-SUFFIX,download.oracle.com
-DOMAIN-SUFFIX,cdn.ibkr.com
-DOMAIN-SUFFIX,secure.interactivebrokers.com
-DOMAIN-KEYWORD,ibkr
-DOMAIN-KEYWORD,ibllc
+# --- 1. 关键字匹配 ---
 DOMAIN-KEYWORD,interactivebrokers
+DOMAIN-KEYWORD,ibkr
+
+# --- 2. IBKR 核心与各区域官方主域名 ---
+DOMAIN-SUFFIX,interactivebrokers.com
+DOMAIN-SUFFIX,interactivebrokers.co.uk
+DOMAIN-SUFFIX,interactivebrokers.com.hk
+DOMAIN-SUFFIX,interactivebrokers.com.au
+DOMAIN-SUFFIX,interactivebrokers.ca
+DOMAIN-SUFFIX,interactivebrokers.ie
+DOMAIN-SUFFIX,interactivebrokers.co.jp
+DOMAIN-SUFFIX,interactivebrokers.sg
+DOMAIN-SUFFIX,interactivebrokers.hu
+DOMAIN-SUFFIX,interactivebrokers.ch
+DOMAIN-SUFFIX,interactivebrokers.eu
+
+# --- 3. 简称与产品服务域名 (Mobile / App / Portal) ---
+DOMAIN-SUFFIX,ibkr.com
+DOMAIN-SUFFIX,ibkr.info
+DOMAIN-SUFFIX,ibkr.app
+DOMAIN-SUFFIX,ibkrcdn.com
+DOMAIN-SUFFIX,ibkr.mobi
+DOMAIN-SUFFIX,ibkr.me
+DOMAIN-SUFFIX,ibkrmobile.com
+DOMAIN-SUFFIX,globaltrader.com
+
+# --- 4. 交易接口、API、行情与后台服务 ---
+DOMAIN-SUFFIX,ibllc.com
+DOMAIN-SUFFIX,ibgroup.com
+DOMAIN-SUFFIX,interactive-brokers.com
+DOMAIN-SUFFIX,ibkr.cloud
+DOMAIN-SUFFIX,ibgateway.com
+
+# --- 5. 身份验证、文档与辅助服务 ---
+# 注意：IBKR 登录/二步验证依赖的主域名均已包含在上述 SUFFIX 中，
+# 此处补充可能的关联推送及分析域名
+DOMAIN-SUFFIX,mobile-identity.com
+
+# --- 6. 专属 IP-CIDR 网段 (已聚合去重，包含官方数据中心与专线) ---
+# IBKR 位于美国、欧洲和亚太自建数据中心 / 专有 BGP IP 段
+IP-CIDR,12.11.168.0/22,no-resolve
+IP-CIDR,64.38.240.0/20,no-resolve
+IP-CIDR,198.136.160.0/19,no-resolve
+IP-CIDR,208.245.104.0/21,no-resolve
+IP-CIDR,208.245.112.0/20,no-resolve
+IP-CIDR,209.223.160.0/19,no-resolve
+IP-CIDR,192.165.176.0/20,no-resolve
+IP-CIDR,159.125.0.0/16,no-resolve
+IP-CIDR,193.108.140.0/22,no-resolve
+IP-CIDR,193.108.144.0/22,no-resolve
+IP-CIDR,193.108.148.0/22,no-resolve
+IP-CIDR,193.108.152.0/22,no-resolve
+IP-CIDR,203.20.106.0/23,no-resolve
+IP-CIDR,203.20.108.0/22,no-resolve
+IP-CIDR,202.160.240.0/20,no-resolve
